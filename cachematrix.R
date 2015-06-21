@@ -1,8 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Calculate inverse of a matrix. If it had already been calculated, just get it from memory.
 
-## Write a short comment describing this function
 
+## get: retrieves a stored matrix
+## set: set original matrix into memory
+## setinv: store calculated inverse matrix into memory
+## getinv: if an inverse previously had been calculated, get it from memory
 makeCacheMatrix <- function(x = matrix()) {
   a <- NULL
   set <- function(y) {
@@ -16,7 +18,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## check if an inverse for a matrix had been calculated
+## If there's one stored in memory, get it from memory.
+## If not, calculate it and store in memory using x$setinv(a)
 
 cacheSolve <- function(x, ...) {
   a <- x$getinv()
